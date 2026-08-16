@@ -9,14 +9,10 @@ st.header('Car Sales Listings Data Visualization')
 # reading the data file
 car_data = pd.read_csv('vehicles.csv') 
 
-# creating a checkbox
+# creating a checkbox for the user to choose whether to build a histogram for the odometer columns
 build_histogram = st.checkbox('Build Histogram for Odometer Columns')
 
-# creating a button to create a histogram
-#hist_button = st.button('Create histogram') 
-
-# if the button is clicked
-#if hist_button: 
+# if the checkbox is checked, create a histogram for the odometer columns
 if build_histogram:
     # writing a message to the user
     st.write('Creating a histogram for the odometer columns in the car sales listings dataset')
