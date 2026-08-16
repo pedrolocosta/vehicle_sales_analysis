@@ -19,3 +19,18 @@ if hist_button:
 
     # showing a Plotly interactive chart
     st.plotly_chart(fig, use_container_width=True)
+
+# creating a button to create a scatter plot
+scatter_button = st.button('Create scatter plot')
+
+# if the button is clicked
+if scatter_button:
+    # writing a message to the user
+    st.write('Creating a scatter plot for the car sales listings dataset')
+
+    #showing a scatter plot using Plotly Express
+    fig2 = px.scatter(car_data, x='odometer', y='prices')
+
+    # showing a Plotly interactive chart
+    st.plotly_chart(fig2, use_container_width=True)
+    
